@@ -1,252 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap");
 
 /* CSS Variables */
 :root {
-    /* Primary Colors */
-    --color-moderate-cyan: hsl(176, 50%, 47%);
-    --color-dark-cyan: hsl(176, 72%, 28%);
+  /* Primary Colors */
+  --color-moderate-cyan: hsl(176, 50%, 47%);
+  --color-dark-cyan: hsl(176, 72%, 28%);
 
-    /* Neutral Colors */
-    --color-black: hsl(0, 0%, 0%);
-    --color-dark-gray: hsl(0, 0%, 48%);
+  /* Neutral Colors */
+  --color-black: hsl(0, 0%, 0%);
+  --color-dark-gray: hsl(0, 0%, 48%);
 
-    /* Typography */
-    --font-family: "Commissioner", sans-serif;
-    --font-size-body: 16px;
-    --font-weight-400: 400;
-    --font-weight-500: 500;
-    --font-weight-700: 700;
+  /* Typography */
+  --font-family: "Commissioner", sans-serif;
+  --font-size-body: 16px;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
 }
 
 * {
-    font-family: var(--font-family);
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  font-family: var(--font-family);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 img,
 picture {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* visual classes */
 .hidden {
-    display: none;
+  display: none;
 }
 
 .hidden-on-mobile {
-    display: none;
+  display: none;
+  
 }
 
 .hidden-on-desktop {
-    display: block;
+  display: block;
 }
 
 /* utility classes*/
 .primary-btn {
-    background-color: var(--color-moderate-cyan);
-    color: white;
-    padding: 20px 50px;
-    border: none;
-    font-weight: var(--font-weight-700);
-    font-size: 1rem;
-    border-radius: 30px;
+  background-color: var(--color-moderate-cyan);
+  color: white;
+  padding: 20px 50px;
+  border: none;
+  font-weight: var(--font-weight-700);
+  font-size: 1rem;
+  border-radius: 30px;
 }
 
 .section {
-    border: 1px solid gray;
-    background-color: white;
-    padding: 30px 20px;
-    text-align: center;
+  border: 1px solid gray;
+  background-color: white;
+  padding: 30px 5%;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  color: var(--color-dark-gray);
 }
 
 /* Base Styles for Mobile First (up to 375px) */
 body {
-    font-size: var(--font-size-body);
-    color: var(--color-black);
-    background: rgb(228, 228, 228);
-    position: relative;
+  font-size: var(--font-size-body);
+  color: var(--color-black);
+  background: rgb(248, 246, 246);
+  position: relative;
 }
 
 .header {
-    background-image: url('/images/image-hero-mobile.jpg');
-    height: 500px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 20px 20px;
+  background-image: url("/images/image-hero-mobile.jpg");
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 20px 20px;
 }
 
 .header__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container {
-    margin: 20px;
-    border-radius: 10px;
-    position: absolute;
-    top: 200px;
+  margin: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 200px;
 }
 
 .monitor {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: var(--color-dark-gray);
-    align-items: center;
-    border-radius: 10px;
-    border: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border: none;
 }
 
 .monitor__logo {
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translate(-50%, 0);
-
-
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .monitor__title {
-    font-size: 1.3rem;
-    margin-top: 30px;
-    color: var(--color-black);
-    max-width: 75%;
+  font-size: 1.3rem;
+  margin-top: 30px;
+  color: var(--color-black);
+  max-width: 75%;
 }
-
-
 
 .monitor__buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.monitor__buttons-bookmark-container{
+    background: rgb(232, 229, 229);
     display: flex;
-    gap: 10px;
+    border-radius: 30px;
     align-items: center;
-    justify-content: center;
-
+    gap: 10px;
+    padding-right: 20px;
+    font-weight: var(--font-weight-700);
 }
-
 .monitor__buttons-bookmark-btn {
-    background-color: var(--color-dark-gray);
-    height: auto;
-    border-radius: 50%;
-    border: none;
+  background-color: rgb(232, 229, 229);
+  height: auto;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 20px;
+  width: auto;
 }
 
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.stats__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.stats__card {
+  text-align: center;
+  border-bottom: 1px solid gray;
+  padding-bottom: 15px;
+}
+.stats__card:nth-last-child(1) {
+  border: none;
+}
+
+.stats__indicator {
+  font-weight: var(--font-weight-700);
+  color: var(--color-black);
+  font-size: 2rem;
+}
+
+.stats__progress-bar {
+  max-width: auto;
+  border-radius: 15px;
+
+  height: 10px;
+  background-color: var(--color-moderate-cyan);
+}
 /* Media Queries */
-
-
-
-
-
-
-
-
-
-
 
 /* For screens wider than 375px (up to 1440px) */
 @media (min-width: 376px) {
+  /* Add any styles that should apply to tablets and small desktops here */
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 
-    /* Add any styles that should apply to tablets and small desktops here */
-    body {
-        max-width: 1440px;
-        margin: 0 auto;
+  .hidden-on-mobile {
+    display: block;
+  }
 
-    }
+  .hidden-on-desktop {
+    display: none;
+  }
 
-    .hidden-on-mobile {
-        display: block;
-    }
+  .header {
+    padding-inline: 11%;
+    background-image: url("/images/image-hero-desktop.jpg");
+    height: 500px;
+  }
 
-    .hidden-on-desktop {
-        display: none;
-    }
+  .header__nav-list {
+    display: flex;
+    gap: 20px;
+    color: white;
+    font-weight: var(--font-weight-700);
+  }
 
-    .header {
-        padding-inline: 11%;
-        background-image: url('/images/image-hero-desktop.jpg');
-        height: 500px;
-    }
+  .container {
+    border: 1px solid red;
+    margin-inline: 25%;
+    top: 280px;
+  }
 
-    .header__nav-list {
-        display: flex;
-        gap: 20px;
-        color: white;
-        font-weight: var(--font-weight-700);
-    }
-
-    .container {
-        border: 1px solid red;
-        margin-inline: 25%;
-        top: 280px;
-    }
-
-    .monitor__buttons {
-        width: 100%;
-        justify-content: space-between;
-
-    }
+  .monitor__buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .stats__cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* For screens wider than 1440px 
 @media (min-width: 1441px) {
