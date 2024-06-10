@@ -306,9 +306,11 @@ body {
   color: var(--color-black);
   font-size: 1.35rem;
 }
+
 .modal__close-btn {
   border: none;
 }
+
 .modal__offer {
   border: .2px solid var(--color-light-gray);
   padding: 30px;
@@ -329,8 +331,15 @@ body {
 
 }
 
+.modal__offer-option-benefit {
+color: var(--color-moderate-cyan);
+font-weight: var(--font-weight-500);
+  
+}
 
-
+.modal__offer-text{
+  margin-bottom: 40px;
+}
 
 
 
