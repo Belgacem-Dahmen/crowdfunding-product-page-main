@@ -9,7 +9,7 @@
   /* Neutral Colors */
   --color-black: hsl(0, 0%, 0%);
   --color-dark-gray: hsl(0, 0%, 48%);
-
+  --color-light-gray:hsl(0, 0%, 90%);
   /* Typography */
   --font-family: "Commissioner", sans-serif;
   --font-size-body: 16px;
@@ -38,7 +38,7 @@ picture {
 
 .hidden-on-mobile {
   display: none;
-  
+
 }
 
 .hidden-on-desktop {
@@ -49,17 +49,19 @@ picture {
 .primary-btn {
   background-color: var(--color-moderate-cyan);
   color: white;
-  padding: 20px 50px;
+  padding: 15px 30px;
   border: none;
-  font-weight: var(--font-weight-700);
-  font-size: 1rem;
+  font-weight: var(--font-weight-500);
+  font-size: .925rem;
   border-radius: 30px;
 }
+
+
 
 .section {
   border: 1px solid gray;
   background-color: white;
-  padding: 30px 5%;
+  padding: 30px 20px;
   text-align: center;
   border-radius: 10px;
   border: none;
@@ -71,7 +73,8 @@ picture {
 body {
   font-size: var(--font-size-body);
   color: var(--color-black);
-  background: rgb(248, 246, 246);
+  background: rgb(248, 246, 250);
+  
   position: relative;
 }
 
@@ -125,15 +128,17 @@ body {
   align-items: center;
   justify-content: center;
 }
-.monitor__buttons-bookmark-container{
-    background: rgb(232, 229, 229);
-    display: flex;
-    border-radius: 30px;
-    align-items: center;
-    gap: 10px;
-    padding-right: 20px;
-    font-weight: var(--font-weight-700);
+
+.monitor__buttons-bookmark-container {
+  background: rgb(232, 229, 229);
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
+  font-weight: var(--font-weight-700);
 }
+
 .monitor__buttons-bookmark-btn {
   background-color: rgb(232, 229, 229);
   height: auto;
@@ -141,7 +146,7 @@ body {
   border: none;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   padding-right: 20px;
   width: auto;
 }
@@ -151,17 +156,20 @@ body {
   flex-direction: column;
   gap: 30px;
 }
+
 .stats__cards {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
+
 .stats__card {
   text-align: center;
   border-bottom: 1px solid gray;
   padding-bottom: 15px;
 }
+
 .stats__card:nth-last-child(1) {
   border: none;
 }
@@ -175,14 +183,107 @@ body {
 .stats__progress-bar {
   max-width: auto;
   border-radius: 15px;
-
   height: 10px;
-  background-color: var(--color-moderate-cyan);
+  background-color: hsl(0, 0%, 95%);;
 }
+.stats__progress-bar-fill {
+  height:100%;
+  max-width: 75%;
+  background: var(--color-moderate-cyan);
+}
+
+.about {
+  text-align: left;
+
+}
+
+.about__title {
+  color: var(--color-black);
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.about__text {
+  margin-bottom: 30px;
+  font-weight: var(--font-weight-400);
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+
+.about__offer {
+  border: .2px solid var(--color-light-gray);
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.about__offer-title {
+  font-size: 16px;
+  color: var(--color-black);
+  margin-bottom: 5px;
+}
+
+.about__offer-benefit {
+  color: var(--color-moderate-cyan);
+  margin-bottom: 20px;
+}
+
+.about__offer-text {
+  font-weight: var(--font-weight-400);
+  font-size: 14px;
+  line-height: 1.4rem;
+  margin-bottom: 25px;
+}
+
+.about__offer-stock {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about__offer-stock__left {
+  font-size: 2rem;
+  color: var(--color-black);
+  font-weight: var(--font-weight-700);
+}
+
+.about__offer-infos,
+.about__offer-actions {
+  display: block;
+
+}
+
+.isDisabled {
+  opacity: 0.2;
+}
+
+.gray{
+  background: var(--color-light-gray);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Media Queries */
 
 /* For screens wider than 375px (up to 1440px) */
 @media (min-width: 376px) {
+
   /* Add any styles that should apply to tablets and small desktops here */
   body {
     max-width: 1440px;
@@ -211,22 +312,52 @@ body {
   }
 
   .container {
-    border: 1px solid red;
+
     margin-inline: 25%;
     top: 280px;
+  }
+
+  .section {
+    padding: 5% 7%;
   }
 
   .monitor__buttons {
     width: 100%;
     justify-content: space-between;
   }
+
   .stats__cards {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
   }
+
+  .stats__card {
+    border-right: .1px solid var(--color-light-gray);
+    border-bottom: none;
+    padding-inline: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+  }
+
+  .about__offer-infos {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .about__offer-actions {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    
+    
+  }
 }
+
 
 /* For screens wider than 1440px 
 @media (min-width: 1441px) {
