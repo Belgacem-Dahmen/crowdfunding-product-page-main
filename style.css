@@ -33,7 +33,7 @@ picture {
 
 /* visual classes */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .hidden-on-mobile {
@@ -476,6 +476,33 @@ body {
     justify-content: space-between;
     align-items: flex-start;
   }
+
+
+  /* success Modal  */
+  /* parent */
+  .test-body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir transparent */
+    font-family: Arial, sans-serif;
+  }
+
+  /* sibling */
+  .test-modal-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+
+
 
 
 }

@@ -188,9 +188,9 @@
       <div class="modal_offers">
         <div class="modal__offer">
           <div class="modal__offer-input">
-            <input class="modal__offer-option" type="radio" id="free" name="offer" value="free" />
+            <input class="modal__offer-option" data-radio="free" type="radio" id="free" name="offer" value="free" />
             <div>
-              <label for="offer" class="modal__offer-input-label">Pledge with no reward</label>
+              <label for="free" class="modal__offer-input-label">Pledge with no reward</label>
             </div>
           </div>
           <p>
@@ -202,9 +202,9 @@
 
         <div class="modal__offer">
           <div class="modal__offer-input">
-            <input class="modal__offer-option" type="radio" id="bamboo" name="offer" value="bamboo" />
+            <input class="modal__offer-option" type="radio"  data-radio="bamboo" id="bamboo" name="offer" value="bamboo" />
             <div>
-              <label for="huey" class="modal__offer-input-label">Bamboo Stand</label>
+              <label for="bamboo" class="modal__offer-input-label">Bamboo Stand</label>
               <p class="modal__offer-option-benefit">Pledge $25 or more</p>
             </div>
 
@@ -234,9 +234,9 @@
 
         <div class="modal__offer ">
           <div class="modal__offer-input">
-            <input class="modal__offer-option" type="radio" id="bamboo" name="offer" value="bamboo" />
+            <input class="modal__offer-option" data-radio="black" type="radio" id="black" name="offer" value="bamboo" />
             <div>
-              <label for="huey" class="modal__offer-input-label">Black Edition Stand</label>
+              <label for="black" class="modal__offer-input-label">Black Edition Stand</label>
               <p class="modal__offer-option-benefit">Pledge $75 or more</p>
             </div>
 
@@ -265,9 +265,10 @@
 
         <div class="isDisabled modal__offer">
           <div class="modal__offer-input">
-            <input class="modal__offer-option" type="radio" id="Mahogany " name="offer" value="Mahogany " disabled />
+            <input class="modal__offer-option" data-radio="3" type="radio" id="Mahogany " name="Mahogany"
+              value="Mahogany " disabled />
             <div>
-              <label for="huey" class="modal__offer-input-label">Mahogany Special Edition</label>
+              <label for="Mahogany" class="modal__offer-input-label">Mahogany Special Edition</label>
               <p class="modal__offer-option-benefit">Pledge $200 or more </p>
             </div>
 
@@ -311,7 +312,10 @@
     </div>
   </div>
 
-  <script src="/index.js"></script>
+
+</html>
+
+<script src="/index.js"></script>
 </body>
 
 </html>
