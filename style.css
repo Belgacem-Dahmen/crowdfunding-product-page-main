@@ -319,6 +319,11 @@ body {
   text-align: left;
 }
 
+.selected {
+  border: .2px solid var(--color-moderate-cyan);
+
+}
+
 .modal__offer-input {
   display: flex;
   gap: 30px;
@@ -332,18 +337,42 @@ body {
 }
 
 .modal__offer-option-benefit {
-color: var(--color-moderate-cyan);
-font-weight: var(--font-weight-500);
-  
+  color: var(--color-moderate-cyan);
+  font-weight: var(--font-weight-500);
+
 }
 
-.modal__offer-text{
+.modal__offer-text {
   margin-bottom: 40px;
 }
 
 
 
 
+.modal__offer-pledge {
+
+  text-align: center;
+}
+
+.modal__offer-pledge-text {
+  margin-bottom: 20px;
+
+}
+
+.modal__offer-pledge-actions {
+  display: flex;
+  max-width: 300px;
+  gap: 15px;
+
+}
+
+.modal__offer-pledge-input {
+  border-radius: 30px;
+  border: 0.2px solid gray;
+  color: var(--color-black);
+  text-align: center;
+  max-width: 50%;
+}
 
 
 
@@ -362,8 +391,12 @@ font-weight: var(--font-weight-500);
     margin: 0 auto;
   }
 
+  .hidden {
+    display: none;
+  }
+
   .hidden-on-mobile {
-    display: block;
+    display: none;
   }
 
   .hidden-on-desktop {
@@ -433,10 +466,17 @@ font-weight: var(--font-weight-500);
 
   .about__offer-actions {
     display: flex;
-    flex: 1;
     justify-content: space-between;
     align-items: center;
+
   }
+
+  .modal__offer-pledge {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
 
 }
 

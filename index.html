@@ -190,7 +190,7 @@
           <div class="modal__offer-input">
             <input class="modal__offer-option" type="radio" id="free" name="offer" value="free" />
             <div>
-              <label for="no-reward" class="modal__offer-input-label">Pledge with no reward</label>
+              <label for="offer" class="modal__offer-input-label">Pledge with no reward</label>
             </div>
           </div>
           <p>
@@ -218,17 +218,21 @@
           <div>
             <p class="about__offer-stock"> <span class="about__offer-stock__left"> 101</span> left</p>
           </div>
-          <!-- Selected pledge start -->
-          <div class="hidden">
-            Enter your pledge $25 Continue
-          </div>
 
-          <!-- Selected pledge end -->
+
+          <div class="hidden modal__offer-pledge">
+            <p class="modal__offer-pledge-text">Enter your pledge</p>
+            <div class="modal__offer-pledge-actions">
+              <input class="modal__offer-pledge-input" type="number" id="dollarInput">
+              <button class="modal__offer-pledge-btn primary-btn"> Continue</button>
+            </div>
+
+          </div>
 
         </div>
 
 
-        <div class="modal__offer">
+        <div class="modal__offer ">
           <div class="modal__offer-input">
             <input class="modal__offer-option" type="radio" id="bamboo" name="offer" value="bamboo" />
             <div>
@@ -246,8 +250,13 @@
             <p class="about__offer-stock"> <span class="about__offer-stock__left"> 64</span> left</p>
           </div>
           <!-- Selected pledge start -->
-          <div class="hidden">
-            Enter your pledge $75 Continue
+          <div class=" hidden modal__offer-pledge">
+            <p class="modal__offer-pledge-text">Enter your pledge</p>
+            <div class="modal__offer-pledge-actions">
+              <input class="modal__offer-pledge-input" type="number" id="dollarInput">
+              <button class="modal__offer-pledge-btn primary-btn"> Continue</button>
+            </div>
+
           </div>
           <!-- Selected pledge end -->
         </div>
@@ -277,7 +286,13 @@
 
 
           <!-- Selected pledge  start -->
-          Enter your pledge $200 Continue
+          <div class=" hidden modal__offer-pledge">
+            <p class="modal__offer-pledge-text">Enter your pledge</p>
+            <div class="modal__offer-pledge-actions">
+              <input class="modal__offer-pledge-input" type="number" id="dollarInput" disabled>
+              <button class="modal__offer-pledge-btn primary-btn"> Continue</button>
+            </div>
+          </div>
           <!-- Selected pledge end -->
 
         </div>
