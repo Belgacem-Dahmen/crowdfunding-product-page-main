@@ -1,22 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Sélectionner les éléments
     const mobileMenuBtn = document.getElementById('hamburgerBtn');
+    const closeMobileMenuBtn = document.getElementById('closeMenubtn')
+
+
     const backProjectBtn = document.getElementById('back-project');
     const bookMarkBtn = document.getElementById('bookmark');
     const closeModalBtn = document.getElementById('close-modal');
     const modal = document.getElementById('modal');
     const modalOffers = document.querySelectorAll('.modal__offer');
     const modalPledges = document.querySelectorAll('.modal__offer-pledge')
+    const mobileMenu = document.querySelector('.mobile-menu')
+
+
+
+
+
+    const validationBtn = document.querySelectorAll('.modal__offer-pledge-btn ')
 
     // Gestionnaire pour ouvrir le menu mobile
     mobileMenuBtn?.addEventListener('click', () => {
-        console.log('Open Menu for Mobile');
+
+        mobileMenu.classList.remove('hidden') //affiche le menu 
+        closeMobileMenuBtn.classList.remove('hidden') //affiche le bouton x pour fermer
+        mobileMenuBtn.classList.add('hidden') //cache le bouton menu
         // Ajouter ici le code pour ouvrir le menu mobile
+
+
+
+
     });
+
+
+    closeMobileMenuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden')
+        mobileMenuBtn.classList.remove('hidden')
+        closeMobileMenuBtn.classList.add('hidden')
+    })
 
     // Gestionnaire pour "back the project"
     backProjectBtn?.addEventListener('click', () => {
-        console.log('Backing the project');
+
         modal.classList.add('section', 'modal')
         modal.classList.remove('hidden')
     });
@@ -54,6 +78,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    const closeSuccessmodalBtn = document.querySelector('.success__modal-btn')
+    const succesModal = document.querySelector('.success__modal')
+    // Trouver tous les éléments avec la classe '.modal__offer'
+    closeSuccessmodalBtn?.addEventListener('click', () => {
+        succesModal.classList.add('hidden') // ferme le modale 
+        //faut penser a retirer le modal background 
+    })
+
+});
+
 
 
 
@@ -86,24 +122,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 let divs = document.querySelectorAll('div.modal__offer');
 
 // Itère sur chaque div et ajoute un écouteur d'événements pour le clic
-divs.forEach(function(div) {
-    div.addEventListener('click', function() {
+divs.forEach(function (div) {
+    div.addEventListener('click', function () {
         // Sélectionne toutes les divs avec la classe modal__offer-pledge
         let allPledgeDivs = document.querySelectorAll('.modal__offer-pledge');
-        
+
         // Ajoute la classe hidden à toutes les divs modal__offer-pledge
-        allPledgeDivs.forEach(function(pledgeDiv) {
+        allPledgeDivs.forEach(function (pledgeDiv) {
             pledgeDiv.classList.add('hidden');
         });
 
         // Vérifie si la div cliquée a une div fille avec la classe modal__offer-pledge
         let pledgeChild = div.querySelector('.modal__offer-pledge');
-        
+
         if (pledgeChild) {
             // Si la div enfant existe, retirer la classe hidden de cette div
             pledgeChild.classList.remove('hidden');
-            
-        } 
+
+        }
     });
 });
 
@@ -122,3 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+
+// validation 

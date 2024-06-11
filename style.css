@@ -77,7 +77,7 @@ picture {
 body {
   font-size: var(--font-size-body);
   color: var(--color-black);
-  background: rgb(248, 246, 250);
+  background: rgb(190, 179, 201);
 
   position: relative;
 }
@@ -94,6 +94,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+.mobile-menu {
+  background: white;
+  position: absolute;
+
+  top: 20%;
+  right: 5%;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-weight: var(--font-weight-700);
+  font-size: 1.125rem;
+  box-shadow: 140px 34px 52px 200px rgba(248, 247, 247, 0.055);
+  -webkit-box-shadow: 140px 34px 52px 200px rgba(79, 65, 65, 0.48);
+  -moz-box-shadow: 140px 34px 52px 200px rgba(79, 65, 65, 0.48);
+  z-index: 4;
 }
 
 .container {
@@ -254,12 +275,14 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+
 }
 
 .about__offer-stock__left {
   font-size: 2rem;
   color: var(--color-black);
   font-weight: var(--font-weight-700);
+
 }
 
 .about__offer-infos,
@@ -287,13 +310,16 @@ body {
   top: -115px;
   right: 50%;
   transform: translate(50%);
-  border: 1px solid red;
+
   border-radius: 10px;
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 25px;
   line-height: 1.5rem;
+  transition: opacity 0.3s ease, transform 0.4s ease, visibility 0s 0.3s;
+  box-shadow: 0 2px 10px rgba(41, 40, 40, 0.1);
+
 }
 
 .modal__header {
@@ -313,10 +339,11 @@ body {
 
 .modal__offer {
   border: .2px solid var(--color-light-gray);
-  padding: 30px;
   margin-bottom: 20px;
   border-radius: 5px;
   text-align: left;
+
+  padding: 30px;
 }
 
 .selected {
@@ -352,6 +379,7 @@ body {
 .modal__offer-pledge {
 
   text-align: center;
+  padding: 0;
 }
 
 .modal__offer-pledge-text {
@@ -374,8 +402,57 @@ body {
   max-width: 50%;
 }
 
+/* success__modal */
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Noir avec une opacité de 50% */
+  z-index: 999;
+  /* Assure que le fond est au-dessous du modal mais au-dessus du contenu */
+}
 
+.success__modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  gap: 20px;
+  padding: 50px 30px;
+  max-width: 520px;
+  position: fixed;
+  top: 600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  z-index: 999;
 
+}
+.success__modal-img{
+  width: 100px;
+}
+.success__modal-title {
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-700);
+
+}
+
+.success__modal-text {
+  font-weight: var(--font-weight-400);
+  font-size: 1rem;
+  line-height: 1.7rem;
+  color: var(--color-dark-gray);
+  font-weight: 500;
+  text-align: center;
+}
+
+.success__modal-btn {
+  padding: 15px 40px;
+}
 
 
 

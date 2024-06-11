@@ -23,9 +23,14 @@
         <p class="header__nav-list-item">Get Started</p>
       </div>
       <img class="hidden-on-desktop" src="/images/icon-hamburger.svg" alt="" id="hamburgerBtn" />
+      <img class="hidden hidden-on-desktop" src="/images/icon-close-menu.svg" alt="" id="closeMenubtn" />
     </nav>
   </header>
-
+  <div class="hidden mobile-menu">
+    <p class="header__nav-list-item">About</p>
+    <p class="header__nav-list-item">Discover</p>
+    <p class="header__nav-list-item">Get Started</p>
+  </div>
   <div class="container">
     <div class="section monitor">
       <img class="monitor__logo" src="/images/logo-mastercraft.svg" alt="" />
@@ -186,6 +191,7 @@
       <p class="modal__question">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world? </p>
 
       <div class="modal_offers">
+        <div class="modal__offer-container">
         <div class="modal__offer">
           <div class="modal__offer-input">
             <input class="modal__offer-option" data-radio="free" type="radio" id="free" name="offer" value="free" />
@@ -198,8 +204,9 @@
             you will be signed up to receive product updates via email.
           </p>
         </div>
+      </div>
 
-
+      <div class="modal__offer-container">
         <div class="modal__offer">
           <div class="modal__offer-input">
             <input class="modal__offer-option" type="radio"  data-radio="bamboo" id="bamboo" name="offer" value="bamboo" />
@@ -230,8 +237,10 @@
           </div>
 
         </div>
+      </div>
 
 
+      <div class="modal__offer-container">
         <div class="modal__offer ">
           <div class="modal__offer-input">
             <input class="modal__offer-option" data-radio="black" type="radio" id="black" name="offer" value="bamboo" />
@@ -260,7 +269,7 @@
           </div>
           <!-- Selected pledge end -->
         </div>
-
+      </div>
 
 
         <div class="isDisabled modal__offer">
@@ -300,18 +309,26 @@
       </div>
       <!-- Selection modal end -->
 
-      <div class="hidden">
-        <!-- Success modal start -->
-
-        Thanks for your support! Your pledge brings us one step closer to
-        sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an
-        email once our campaign is completed. Got it!
-
-        <!-- Success modal end -->
-      </div>
+      
     </div>
   </div>
+  <div class="hidden modal-background">
 
+  </div>
+  <div class="hidden success__modal">
+    <!-- Success modal start -->
+    <img class="success__modal-img" src="/images/icon-check.svg" alt="">
+    <h3 class="success__modal-title">Thanks for your support! </h3>
+    <p class="success__modal-text">Your pledge brings us one step closer to
+      sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an
+      email once our campaign is completed. </p>
+      <button class="success__modal-btn primary-btn" id="close-success-modal">
+        Got it!
+      </button>
+    
+
+    <!-- Success modal end -->
+  </div>
 
 </html>
 
