@@ -38,7 +38,6 @@ picture {
 
 .hidden-on-mobile {
   display: none;
-
 }
 
 .hidden-on-desktop {
@@ -52,7 +51,7 @@ picture {
   padding: 10px 20px;
   border: none;
   font-weight: var(--font-weight-500);
-  font-size: .925rem;
+  font-size: 0.925rem;
   border-radius: 30px;
   cursor: pointer;
 }
@@ -60,7 +59,6 @@ picture {
 .primary-btn:hover {
   background-color: var(--color-dark-cyan);
 }
-
 
 .section {
   border: 1px solid gray;
@@ -96,14 +94,12 @@ body {
   align-items: center;
 }
 
-
 .mobile-menu {
   background: white;
   position: absolute;
 
   top: 20%;
   right: 5%;
-  padding: 20px;
   border-radius: 10px;
   width: 90%;
   display: flex;
@@ -115,6 +111,11 @@ body {
   -webkit-box-shadow: 140px 34px 52px 200px rgba(79, 65, 65, 0.48);
   -moz-box-shadow: 140px 34px 52px 200px rgba(79, 65, 65, 0.48);
   z-index: 4;
+}
+
+.mobile__menu-item {
+  padding: 20px 10px;
+  border-bottom: 2px solid var(--color-dark-gray);
 }
 
 .container {
@@ -162,7 +163,6 @@ body {
   align-items: center;
   justify-content: space-between;
   font-weight: var(--font-weight-700);
-
 }
 
 .monitor__buttons-bookmark-btn {
@@ -216,7 +216,6 @@ body {
   border-radius: 15px;
   height: 10px;
   background-color: hsl(0, 0%, 95%);
-
 }
 
 .stats__progress-bar-fill {
@@ -228,7 +227,6 @@ body {
 
 .about {
   text-align: left;
-
 }
 
 .about__title {
@@ -244,9 +242,8 @@ body {
   line-height: 1.5rem;
 }
 
-
 .about__offer {
-  border: .2px solid var(--color-light-gray);
+  border: 0.2px solid var(--color-light-gray);
   padding: 30px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -275,21 +272,17 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-
 }
 
 .about__offer-stock__left {
   font-size: 2rem;
   color: var(--color-black);
   font-weight: var(--font-weight-700);
-
 }
 
 .about__offer-infos,
 .about__offer-actions {
   display: block;
-
-
 }
 
 .isDisabled {
@@ -299,7 +292,6 @@ body {
 .gray {
   background: var(--color-light-gray);
 }
-
 
 /* Modal  */
 .modal {
@@ -319,7 +311,6 @@ body {
   line-height: 1.5rem;
   transition: opacity 0.3s ease, transform 0.4s ease, visibility 0s 0.3s;
   box-shadow: 0 2px 10px rgba(41, 40, 40, 0.1);
-
 }
 
 .modal__header {
@@ -338,7 +329,7 @@ body {
 }
 
 .modal__offer {
-  border: .2px solid var(--color-light-gray);
+  border: 0.2px solid var(--color-light-gray);
   margin-bottom: 20px;
   border-radius: 5px;
   text-align: left;
@@ -347,8 +338,7 @@ body {
 }
 
 .selected {
-  border: .2px solid var(--color-moderate-cyan);
-
+  border: 0.2px solid var(--color-moderate-cyan);
 }
 
 .modal__offer-input {
@@ -360,38 +350,30 @@ body {
 .modal__offer-input-label {
   color: var(--color-black);
   font-weight: var(--font-weight-700);
-
 }
 
 .modal__offer-option-benefit {
   color: var(--color-moderate-cyan);
   font-weight: var(--font-weight-500);
-
 }
 
 .modal__offer-text {
   margin-bottom: 40px;
 }
 
-
-
-
 .modal__offer-pledge {
-
   text-align: center;
   padding: 0;
 }
 
 .modal__offer-pledge-text {
   margin-bottom: 20px;
-
 }
 
 .modal__offer-pledge-actions {
   display: flex;
   max-width: 300px;
   gap: 15px;
-
 }
 
 .modal__offer-pledge-input {
@@ -430,15 +412,13 @@ body {
   transform: translate(-50%, -50%);
   background: white;
   z-index: 999;
-
 }
-.success__modal-img{
+.success__modal-img {
   width: 100px;
 }
 .success__modal-title {
   font-size: 1.4rem;
   font-weight: var(--font-weight-700);
-
 }
 
 .success__modal-text {
@@ -454,14 +434,10 @@ body {
   padding: 15px 40px;
 }
 
-
-
-
 /* Media Queries */
 
 /* For screens wider than 375px (up to 1440px) */
 @media (min-width: 676px) {
-
   /* Add any styles that should apply to tablets and small desktops here */
   body {
     max-width: 1440px;
@@ -494,7 +470,6 @@ body {
   }
 
   .container {
-
     margin-inline: 25%;
     top: 280px;
   }
@@ -518,7 +493,7 @@ body {
   }
 
   .stats__card {
-    border-right: .1px solid var(--color-light-gray);
+    border-right: 0.1px solid var(--color-light-gray);
     border-bottom: none;
     padding-inline: 10px;
     display: flex;
@@ -526,7 +501,6 @@ body {
     align-items: flex-start;
     flex: 1;
   }
-
 
   .about__text {
     margin-bottom: 30px;
@@ -538,14 +512,12 @@ body {
   .about__offer-infos {
     display: flex;
     justify-content: space-between;
-
   }
 
   .about__offer-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   .modal__offer-pledge {
@@ -553,7 +525,6 @@ body {
     justify-content: space-between;
     align-items: flex-start;
   }
-
 
   /* success Modal  */
   /* parent */
@@ -577,13 +548,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
-
-
-
-
-
 }
-
 
 /* For screens wider than 1440px 
 @media (min-width: 1441px) {
