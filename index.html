@@ -177,6 +177,11 @@
       </div>
     </div>
 
+    <div class="hidden modal-background" id="modal-background">
+    </div>
+
+
+
 
     <div class="hidden" id="modal">
       <!-- Selection modal start -->
@@ -192,93 +197,113 @@
 
       <div class="modal_offers">
         <div class="modal__offer-container">
-        <div class="modal__offer">
-          <div class="modal__offer-input">
-            <input class="modal__offer-option" data-radio="free" type="radio" id="free" name="offer" value="free" />
-            <div>
-              <label for="free" class="modal__offer-input-label">Pledge with no reward</label>
+          <div class="modal__offer">
+            <div class="modal__offer-input">
+              <input class="modal__offer-option" data-radio="free" type="radio" id="free" name="offer" value="free" />
+              <div class="modal__offer-infos">
+                <label for="free" class="modal__offer-input-label">Pledge with no reward</label>
+              </div>
             </div>
+            <p>
+              Choose to support us without a reward if you simply believe in our project. As a backer,
+              you will be signed up to receive product updates via email.
+            </p>
           </div>
-          <p>
-            Choose to support us without a reward if you simply believe in our project. As a backer,
-            you will be signed up to receive product updates via email.
-          </p>
         </div>
-      </div>
 
-      <div class="modal__offer-container">
-        <div class="modal__offer">
-          <div class="modal__offer-input">
-            <input class="modal__offer-option" type="radio"  data-radio="bamboo" id="bamboo" name="offer" value="bamboo" />
-            <div>
-              <label for="bamboo" class="modal__offer-input-label">Bamboo Stand</label>
-              <p class="modal__offer-option-benefit">Pledge $25 or more</p>
+        <div class="modal__offer-container">
+          <div class="modal__offer">
+            <div class="modal__offer-input">
+              <input class="modal__offer-option" type="radio" data-radio="bamboo" id="bamboo" name="offer"
+                value="bamboo" />
+              <div class="modal__offer-infos">
+                <div class="modal__offer-infos-left">
+                  <label for="bamboo" class="modal__offer-input-label">Bamboo Stand</label>
+                  <p class="modal__offer-option-benefit">Pledge $25 or more</p>
+                </div>
+                <div class="hidden-on-mobile">
+                  <p class="mobile__about__offer-stock"> <span class="mobile__about__offer-stock__left"> 101</span> left
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <p class="modal__offer-text">
+              Pledge $25 or more You get an ergonomic stand made of natural bamboo.
+              You've helped us launch our promotional campaign, and you’ll be added to
+              a special Backer member list.
+            </p>
+            <div class="hidden-on-desktop">
+              <p class="about__offer-stock"> <span class="about__offer-stock__left"> 101</span> left</p>
+            </div>
+
+
+            <div class="hidden modal__offer-pledge">
+              <p class="modal__offer-pledge-text">Enter your pledge</p>
+              <div class="modal__offer-pledge-actions">
+                <input class="modal__offer-pledge-input" type="number" id="dollarInput">
+                <button class="modal__offer-pledge-btn primary-btn"> Continue</button>
+              </div>
+
             </div>
 
           </div>
-
-          <p class="modal__offer-text">
-            Pledge $25 or more You get an ergonomic stand made of natural bamboo.
-            You've helped us launch our promotional campaign, and you’ll be added to
-            a special Backer member list.
-          </p>
-          <div>
-            <p class="about__offer-stock"> <span class="about__offer-stock__left"> 101</span> left</p>
-          </div>
-
-
-          <div class="hidden modal__offer-pledge">
-            <p class="modal__offer-pledge-text">Enter your pledge</p>
-            <div class="modal__offer-pledge-actions">
-              <input class="modal__offer-pledge-input" type="number" id="dollarInput">
-              <button class="modal__offer-pledge-btn primary-btn"> Continue</button>
-            </div>
-
-          </div>
-
         </div>
-      </div>
 
 
-      <div class="modal__offer-container">
-        <div class="modal__offer ">
-          <div class="modal__offer-input">
-            <input class="modal__offer-option" data-radio="black" type="radio" id="black" name="offer" value="bamboo" />
-            <div>
-              <label for="black" class="modal__offer-input-label">Black Edition Stand</label>
-              <p class="modal__offer-option-benefit">Pledge $75 or more</p>
+        <div class="modal__offer-container">
+          <div class="modal__offer ">
+            <div class="modal__offer-input">
+              <input class="modal__offer-option" data-radio="black" type="radio" id="black" name="offer"
+                value="bamboo" />
+              <div class="modal__offer-infos">
+                <div class="modal__offer-infos-left">
+                  <label for="black" class="modal__offer-input-label">Black Edition Stand</label>
+                  <p class="modal__offer-option-benefit">Pledge $75 or more</p>
+                </div>
+                <div class="hidden-on-mobile">
+                  <p class="mobile__about__offer-stock"> <span class="mobile__about__offer-stock__left"> 64</span> left
+                  </p>
+                </div>
+              </div>
+
             </div>
 
-          </div>
-
-          <p class="modal__offer-text">
-            You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-            member list. Shipping is included.
-          </p>
-          <div>
-            <p class="about__offer-stock"> <span class="about__offer-stock__left"> 64</span> left</p>
-          </div>
-          <!-- Selected pledge start -->
-          <div class=" hidden modal__offer-pledge">
-            <p class="modal__offer-pledge-text">Enter your pledge</p>
-            <div class="modal__offer-pledge-actions">
-              <input class="modal__offer-pledge-input" type="number" id="dollarInput">
-              <button class="modal__offer-pledge-btn primary-btn"> Continue</button>
+            <p class="modal__offer-text">
+              You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+              member list. Shipping is included.
+            </p>
+            <div class="hidden-on-desktop about__offer-stock-container">
+              <p class="about__offer-stock"> <span class="about__offer-stock__left"> 64</span> left</p>
             </div>
+            <!-- Selected pledge start -->
+            <div class=" hidden modal__offer-pledge">
+              <p class="modal__offer-pledge-text">Enter your pledge</p>
+              <div class="modal__offer-pledge-actions">
+                <input class="modal__offer-pledge-input" type="number" id="dollarInput">
+                <button class="modal__offer-pledge-btn primary-btn"> Continue</button>
+              </div>
 
+            </div>
+            <!-- Selected pledge end -->
           </div>
-          <!-- Selected pledge end -->
         </div>
-      </div>
 
 
         <div class="isDisabled modal__offer">
           <div class="modal__offer-input">
             <input class="modal__offer-option" data-radio="3" type="radio" id="Mahogany " name="Mahogany"
               value="Mahogany " disabled />
-            <div>
-              <label for="Mahogany" class="modal__offer-input-label">Mahogany Special Edition</label>
-              <p class="modal__offer-option-benefit">Pledge $200 or more </p>
+            <div class="modal__offer-infos">
+              <div class="modal__offer-infos-left">
+                <label for="Mahogany" class="modal__offer-input-label">Mahogany Special Edition</label>
+                <p class="modal__offer-option-benefit">Pledge $200 or more </p>
+              </div>
+              <div class="hidden-on-mobile">
+                0 left
+              </div>
             </div>
 
           </div>
@@ -288,7 +313,7 @@
             Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be
             added to our Backer member list. Shipping is included.
           </p>
-          <div>
+          <div class="hidden-on-desktop">
             0 left
           </div>
 
@@ -300,7 +325,7 @@
             <p class="modal__offer-pledge-text">Enter your pledge</p>
             <div class="modal__offer-pledge-actions">
               <input class="modal__offer-pledge-input" type="number" id="dollarInput" disabled>
-              <button class="modal__offer-pledge-btn primary-btn"> Continue</button>
+              <button class="modal__offer-pledge-btn primary-btn" disabled> Continue</button>
             </div>
           </div>
           <!-- Selected pledge end -->
@@ -309,23 +334,25 @@
       </div>
       <!-- Selection modal end -->
 
-      
+
     </div>
   </div>
-  <div class="hidden modal-background">
 
-  </div>
+
+
+
+  <!-- Success modal start -->
+
   <div class="hidden success__modal">
-    <!-- Success modal start -->
     <img class="success__modal-img" src="/images/icon-check.svg" alt="">
     <h3 class="success__modal-title">Thanks for your support! </h3>
     <p class="success__modal-text">Your pledge brings us one step closer to
       sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an
       email once our campaign is completed. </p>
-      <button class="success__modal-btn primary-btn" id="close-success-modal">
-        Got it!
-      </button>
-    
+    <button class="success__modal-btn primary-btn" id="close-success-modal">
+      Got it!
+    </button>
+
 
     <!-- Success modal end -->
   </div>

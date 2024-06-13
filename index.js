@@ -11,25 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalOffers = document.querySelectorAll('.modal__offer');
     const modalPledges = document.querySelectorAll('.modal__offer-pledge')
     const mobileMenu = document.querySelector('.mobile-menu')
-
-
-
+    const modalBackground = document.getElementById('modal-background')
+    const continueButtons = document.querySelectorAll('.modal__offer-pledge-btn')
+    const succesModal = document.querySelector('.success__modal')
 
 
     const validationBtn = document.querySelectorAll('.modal__offer-pledge-btn ')
 
     // Gestionnaire pour ouvrir le menu mobile
-    mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenuBtn?.addEventListener('click', () => OpenMobileMenu());
 
+    const OpenMobileMenu = () => {
         mobileMenu.classList.remove('hidden') //affiche le menu 
         closeMobileMenuBtn.classList.remove('hidden') //affiche le bouton x pour fermer
         mobileMenuBtn.classList.add('hidden') //cache le bouton menu
-        // Ajouter ici le code pour ouvrir le menu mobile
-
-
-
-
-    });
+    }
 
 
     closeMobileMenuBtn?.addEventListener('click', () => {
@@ -40,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Gestionnaire pour "back the project"
     backProjectBtn?.addEventListener('click', () => {
-
+        modalBackground.classList.remove('hidden')
         modal.classList.add('section', 'modal')
         modal.classList.remove('hidden')
     });
@@ -55,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeModalBtn?.addEventListener('click', () => {
         modal.classList.remove('section', 'modal');
         modal.classList.add('hidden');
+        modalBackground.classList.add('hidden')
     });
 
     // Gestionnaire pour les offres dans la modal
@@ -82,9 +79,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const closeSuccessmodalBtn = document.querySelector('.success__modal-btn')
     const succesModal = document.querySelector('.success__modal')
+    const modalBackground = document.getElementById('modal-background')
     // Trouver tous les éléments avec la classe '.modal__offer'
     closeSuccessmodalBtn?.addEventListener('click', () => {
         succesModal.classList.add('hidden') // ferme le modale 
+        modalBackground.classList.add('hidden')
         //faut penser a retirer le modal background 
     })
 
@@ -162,3 +161,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // validation 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const continueButtons = document.querySelectorAll('.modal__offer-pledge-btn')
+    const succesModal = document.querySelector('.success__modal')
+    continueButtons?.forEach(button => {
+        button.addEventListener('click', function () {
+
+            //ajouter hidden lel modal 
+            modal.classList.remove('section', 'modal')
+            modal.classList.add('hidden')
+            //remove hidden mel success modal 
+            succesModal.classList.remove('hidden') // ferme le modale 
+
+        });
+    });
+});
